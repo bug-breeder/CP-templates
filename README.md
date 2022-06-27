@@ -1,8 +1,8 @@
 # alg_template
 
 ## String Algorithms
-- [Z Algorithm](./"string algs"/z_alg.cpp) 
-- [KMP Algorithm](./"string algs"/kmp_alg.cpp)
+- [Z Algorithm](./string_algs/z_alg.cpp) 
+- [KMP Algorithm](./string_algs/kmp_alg.cpp)
 
 ## Graph
 - [Dinic](./src/dinic.cpp)
