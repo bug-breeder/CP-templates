@@ -3,20 +3,28 @@
 ## String Algorithms
 - [Z Algorithm](./string_algs/z_alg.cpp) 
 - [KMP Algorithm](./string_algs/kmp_alg.cpp)
+- [Hashing](./string_algs/hashing.cpp)
 
 ## Graph
-- [Dinic](./src/dinic.cpp)
-- [Edmonds Karp](./src/edmonds_karp.cpp)
-- [HLD on tree](./src/hld.cpp)
-- [Centroid decomp on tree](./src/centroid.cpp)
-- [maximum maching](./src/matching.cpp)
-- [LCA](./src/lca.cpp)
+- [Disjoint set](./graph/union_find.cpp)
+- [Disjoint set with component's vector](./graph/union_find_set.cpp)
+- [Dijkstra](./graph/dijkstra.cpp)
+- [Tarjan](./graph/tarjan_find_component.cpp)
+- [LCA](./graph/lca_tree.cpp)
+- [Edmonds Karp](./graph/edmonds_karp.cpp)
+- [Dinic](./graph/dinic.cpp)
+- [maximum maching](./graph/matching.cpp)
+- [HLD on tree](./graph/hld.cpp)
+- [Centroid decomp on tree](./graph/centroid.cpp)
 
 ## Data structures
-- [non-recursive segment tree](./src/non_recursive_seg_tree.cpp)
-- [lazy segment tree](./src/lazy_seg_tree.cpp)
-- [2d segment tree](./src/2d_seg_tree.cpp)
+- [big numbers](./data_structures/big_num.cpp)
+- [non-recursive segment tree](./data_structures/non_recursive_seg_tree.cpp)
+- [lazy segment tree](./data_structures/lazy_seg_tree.cpp)
+- [2d segment tree](./data_structures/2d_seg_tree.cpp)
+- [big num](./data_structures/big_num.cpp)
+- [Fenwick tree (BIT)](./data_structures/fenwick_tree.h)
+- [Segment Tree](./data_structures/seg_tree.h)
 
 ## Other
 - [convex hull dp](./src/convex_hull_dp.cpp)
-- [big num](./src/big_num.cpp)
