@@ -16,6 +16,7 @@
 - [maximum maching](./graph/matching.cpp)
 - [HLD on tree](./graph/hld.cpp)
 - [Centroid decomp on tree](./graph/centroid.cpp)
+- [Binary lifting](./graph/binary_lifting.cpp)
 
 ## Data structures
 - [big numbers](./data_structures/big_num.cpp)
