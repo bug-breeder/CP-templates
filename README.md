@@ -4,6 +4,7 @@
 - [Z Algorithm](./string_algs/z_alg.cpp) 
 - [KMP Algorithm](./string_algs/kmp_alg.cpp)
 - [Hashing](./string_algs/hashing.cpp)
+- [Suffix Array](./string_algs/suffix_array.cpp)
 
 ## Graph
 - [Disjoint set](./graph/union_find.cpp)
