@@ -31,6 +31,7 @@ void Build(int id, int l, int r){
 	int mid = (l+r)/2;
 	Build(id*2, l, mid);
 	Build(id*2+1, mid+1, r);
+	t[id] = t[id*2] + t[id*2+1];
 }
  
 void Update(int id, int l, int r, int L, int R, int val){
@@ -44,6 +45,7 @@ void Update(int id, int l, int r, int L, int R, int val){
 	int mid = (l+r)/2;
 	Update(id*2, l, mid, L, R, val);
 	Update(id*2+1, mid+1, r, L, R, val);
+	t[id] = t[id*2] + t[id*2+1];
 }
  
 ll Query(int id, int l, int r, int pos){
