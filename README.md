@@ -6,6 +6,10 @@
 - [Hashing](./string_algs/hashing.cpp)
 - [Suffix Array](./string_algs/suffix_array.cpp)
 
+## Maths
+- [Modular exponentiation](./maths/pow_mod.cpp)
+- [Combination](./maths/ckn.cpp)
+
 ## Graph
 - [Disjoint set](./graph/union_find.cpp)
 - [Disjoint set with component's vector](./graph/union_find_set.cpp)
