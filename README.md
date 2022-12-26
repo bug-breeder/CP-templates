@@ -32,6 +32,10 @@
 - [Fenwick tree (BIT)](./data_structures/fenwick_tree.h)
 - [Segment Tree](./data_structures/seg_tree.h)
 - [Persistent segment tree](./data_structures/persistent_segment_tree.cpp)
+- [Sparse table](./data_structures/sparse_table.cpp)
+- [Sparse table sum](./data_structures/sparse_table_sum.cpp)
+- [Sparse table 2D](./data_structures/sparse_table_2d.cpp)
+
 ## Other
 - [convex hull dp](./src/convex_hull_dp.cpp)
 - [Ordered set](./Others/ordered_set.cpp)
