@@ -1,4 +1,12 @@
-template <class T, class Op = Min>
+template<class T> 
+class Min{
+  public:
+  T operator()(const T &a, const T &b) const{
+      return min(a,b);
+  }
+};
+
+template <class T, class Op = Min<T> >
 class SparseTable {
  public:
   explicit SparseTable(const std::vector<T>& arr) {
