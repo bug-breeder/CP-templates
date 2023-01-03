@@ -6,7 +6,7 @@ class Min{
   }
 };
 
-template <class T, class Op = Min<T> >
+template <class T, class Op>
 class SparseTable {
  public:
   explicit SparseTable(const std::vector<T>& arr) {
