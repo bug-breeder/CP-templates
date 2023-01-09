@@ -36,6 +36,8 @@
 - [Sparse table sum](./data_structures/sparse_table_sum.cpp)
 - [Sparse table 2D](./data_structures/sparse_table_2d.cpp)
 
-## Other
+## Others
 - [convex hull dp](./src/convex_hull_dp.cpp)
 - [Ordered set](./Others/ordered_set.cpp)
+- [Debugging template](./Others/debug.cpp)
+
