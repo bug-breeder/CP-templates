@@ -1,3 +1,4 @@
+//Template for debugging
 #ifndef ONLINE_JUDGE
 template <class T1, class T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p) {
@@ -31,4 +32,5 @@ _NTH_ARG(dummy, ##__VA_ARGS__, _FE_5, _FE_4, _FE_3, _FE_2, _FE_1, _FE_0)     \
     cerr << endl
 #else
 #define dbg(...)
+#define watch(...)
 #endif
