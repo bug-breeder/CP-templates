@@ -7,7 +7,7 @@
 - [Suffix Array](./string_algs/suffix_array.cpp)
 
 ## Maths
-- [Modular exponentiation](./maths/pow_mod.cpp)
+- [Modular exponentiation](./maths/powmod.cpp)
 - [Combination](./maths/ckn.cpp)
 
 ## Graph
