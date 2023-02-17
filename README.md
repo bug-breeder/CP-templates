@@ -15,6 +15,7 @@
 - [Disjoint set with component's vector](./graph/union_find_set.cpp)
 - [Dijkstra](./graph/dijkstra.cpp)
 - [Tarjan](./graph/tarjan_find_component.cpp)
+- [Tarjan find SCCs](./graph/scc.cpp)
 - [LCA](./graph/lca_tree.h)
 - [Edmonds Karp](./graph/edmonds_karp.cpp)
 - [Dinic](./graph/dinic.cpp)
