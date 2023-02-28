@@ -19,7 +19,7 @@ class SparseTable {
     }
   }
 
-  int query(int left, int right) const {
+  T query(int left, int right) const {
     unsigned j = std::log2(right - left + 1);
     return op(lookup[left][j], lookup[right - (1u << j) + 1][j]);
   }
