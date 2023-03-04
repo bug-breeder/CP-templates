@@ -41,5 +41,5 @@
 - [convex hull dp](./src/convex_hull_dp.cpp)
 - [Ordered set](./Others/ordered_set.cpp)
 - [Debugging template](./Others/debug.cpp)
-- [Lambda](./lambda.cpp)
+- [Lambda](./Others/lambda.cpp)
 
