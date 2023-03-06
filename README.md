@@ -8,7 +8,7 @@
 
 ## Maths
 - [Modular exponentiation](./maths/powmod.cpp)
-- [Combination](./maths/ckn.cpp)
+- [Combination](./maths/nCr.cpp)
 
 ## Graph
 - [Disjoint set](./graph/union_find.cpp)
