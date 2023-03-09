@@ -1,29 +1,20 @@
-#include <bits/stdc++.h>
-using namespace std;
+struct FenwickTree {
+  vector<long long> s;
+  int tree_size;
 
-class fenwick_tree
-{
-private:
-    vector<long long> data;
-    int tree_size;
+  inline void update(long long &target, long long &value) { target += value; }
 
-public:
-    fenwick_tree(int tree_size = 0)
-    {
-        this->tree_size = tree_size;
-        data.resize(tree_size + 1);
-    }
-    ~fenwick_tree() {}
-    void update(int pos, long long val)
-    {
-        for (; pos <= tree_size; pos += pos & -pos)
-            data[pos] += val;
-    }
-    long long query(int pos)
-    {
-        long long ret = 0;
-        for (; pos > 0; pos -= pos & -pos)
-            ret += data[pos];
-        return ret;
-    }
+  FenwickTree(int tree_size = 0, int val = 0) : tree_size(tree_size) {
+    s.resize(tree_size, val);
+  }
+  void update(int pos, long long val) { // s[pos]+= val
+    for (; pos < tree_size; pos += pos & -pos)
+      update(s[pos], val);
+  }
+  long long query(int pos) { // [1, pos]
+    long long ret = 0;
+    for (; pos > 0; pos -= pos & -pos)
+      update(ret, s[pos]);
+    return ret;
+  }
 };
