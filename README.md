@@ -9,6 +9,8 @@
 ## Maths
 - [Modular exponentiation](./maths/powmod.cpp)
 - [Combination](./maths/nCr.cpp)
+- [Gaussian Elimination](./maths/gauss.cpp)
+- [Gaussian Elimination With Modulo](./maths/gauss_mod.cpp)
 
 ## Graph
 - [Disjoint set](./graph/union_find.cpp)
