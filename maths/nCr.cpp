@@ -14,4 +14,6 @@ long long C(long long k, long long n) {
     return fac[n] * powMod(fac[k], MOD-2) % MOD * powMod(fac[n-k], MOD-2) % MOD; //use invFac to get faster
 }
 //fac[0] = 1;
-//FOR(i,1,MAX-1) fac[i] = (fac[i-1]*i) % MOD;
+//for (int i = 1; i < fac.size(); i++)
+//  fac[i] = (fac[i - 1] * i) % MOD;
+
