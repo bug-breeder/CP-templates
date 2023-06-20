@@ -11,7 +11,7 @@ long long C(long long k, long long n) {
     if (k==0) return 1;
     if (k > n) return 0;
     if (k < 0) return 0;
-    return fac[n] * powMod(fac[k], MOD-2) % MOD * powMod(fac[n-k], MOD-2) % MOD; //use invFac to get faster
+    return fac[n] * powMod(fac[k], MOD-2) % MOD * powMod(fac[n-k], MOD-2) % MOD; //precalculate invFac to reduce running time
 }
 //fac[0] = 1;
 //for (int i = 1; i < fac.size(); i++)
