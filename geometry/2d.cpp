@@ -1,8 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-const int N = 3e5 + 9;
-
 const double inf = 1e100;
 const double eps = 1e-9;
 const double PI = acos((double)-1.0);
@@ -1171,10 +1166,4 @@ double maximum_inscribed_circle(vector<PT> p) {
 		else r = mid;
 	}
 	return l;
-}
-int32_t main() {
-  	ios_base::sync_with_stdio(0);
-  	cin.tie(0);
-  	
- 	return 0;	
 }
