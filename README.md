@@ -40,7 +40,7 @@
 - [Sparse table 2D](./data_structures/sparse_table_2d.cpp)
 
 ## Geometry
-- [convex hull dp](./geometry/2d.cpp)
+- [2d geometry](./geometry/2d.cpp)
 
 ## Others
 - [convex hull dp](./src/convex_hull_dp.cpp)
