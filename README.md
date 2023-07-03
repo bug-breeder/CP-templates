@@ -11,6 +11,7 @@
 - [Combination](./maths/nCr.cpp)
 - [Gaussian Elimination](./maths/gauss.cpp)
 - [Gaussian Elimination With Modulo](./maths/gauss_mod.cpp)
+- [Matrix multiplication](./maths/matrix_mul.cpp)
 
 ## Graph
 - [Disjoint set](./graph/union_find.cpp)
