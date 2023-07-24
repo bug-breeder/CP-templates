@@ -30,7 +30,8 @@
 ## Data structures
 - [big numbers](./data_structures/big_num.cpp)
 - [non-recursive segment tree](./data_structures/non_recursive_seg_tree.cpp)
-- [lazy segment tree add sum](./data_structures/lazy_seg_tree.cpp)
+- [lazy segment tree range add, sum query(./data_structures/lazy_seg_tree_add_sum.cpp)
+- [lazy segment tree add query 1 value](./data_structures/lazy_seg_tree.cpp)
 - [lazy segment tree set values query sum](./data_structures/lazy_seg_tree_set_sum.cpp)
 - [2d segment tree](./data_structures/2d_seg_tree.cpp)
 - [big num](./data_structures/big_num.cpp)
