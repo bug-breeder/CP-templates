@@ -51,4 +51,5 @@
 - [Ordered set](./Others/ordered_set.cpp)
 - [Debugging template](./Others/debug.cpp)
 - [Lambda](./Others/lambda.cpp)
+- [Parallel binary search](./Others/parallel_binary_search.cpp)
 
