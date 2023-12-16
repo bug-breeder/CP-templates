@@ -1,116 +1,53 @@
-struct tree_node{
-    int val;
-    tree_node()
-    {
-        //default value
-        val = 0;
+ 
+static char buf[450 << 20];
+void *operator new(size_t s) {
+  static size_t i = sizeof buf;
+  assert(s < i);
+  return (void *)&buf[i -= s];
+}
+void operator delete(void *) {}
+ 
+const int inf = 1e9;
+struct Node {
+  Node *l = 0, *r = 0;
+  int lo, hi, mset = inf, madd = 0, val = -inf;
+  Node(int lo, int hi) : lo(lo), hi(hi) {} // Large interval of -inf
+  Node(vi &v, int lo, int hi) : lo(lo), hi(hi) {
+    if (lo + 1 < hi) {
+      int mid = lo + (hi - lo) / 2;
+      l = new Node(v, lo, mid);
+      r = new Node(v, mid, hi);
+      val = (l->val + r->val);
+    } else
+      val = v[lo];
+  }
+  int query(int L, int R) {
+    if (R <= lo || hi <= L)
+      return 0;
+    if (L <= lo && hi <= R)
+      return val;
+    push();
+    return (l->query(L, R) + r->query(L, R));
+  }
+  void set(int L, int R, int x) {
+    if (R <= lo || hi <= L)
+      return;
+    if (L <= lo && hi <= R) {
+      mset = x, madd = 0;
+      val = (hi - lo) * mset;
+    } else {
+      push(), l->set(L, R, x), r->set(L, R, x);
+      val = (l->val + r->val);
     }
+  }
+  void push() {
+    if (!l) {
+      int mid = lo + (hi - lo) / 2;
+      l = new Node(lo, mid);
+      r = new Node(mid, hi);
+    }
+    if (mset != inf)
+      l->set(lo, hi, mset), r->set(lo, hi, mset), mset = inf;
+  }
 };
-struct segmentTree
-{
-    int n;
-    vector<int> a;
-    vector<tree_node> tree;
-    vector<bool> cLazy;
-    vector<int> lazy;
-    segmentTree(int n)
-    {
-        this->n = n;
-        a.resize(n);
-        tree.resize(4*n + 5);
-        cLazy.assign(4*n + 5, false);
-        lazy.assign(4*n + 5, 0);
-    }
-    void propagate(int node, int s, int e)
-    {
-        if(s != e)
-        {
-            cLazy[node*2] = 1;
-            cLazy[node*2 + 1] = 1;
-            lazy[node*2] = lazy[node];
-            lazy[node*2 + 1] = lazy[node]; 
-        }
-        tree[node].val = (e - s + 1) * lazy[node];
-        cLazy[node] = 0;
-    }
-    tree_node combine(tree_node i1, tree_node i2)
-    {
-        // Change this combine function
-        // according to the question
-        // Example - max , min, sum 
-        // If T change this will change
-        tree_node result;
-        result.val = i1.val + i2.val;
-        return result;
-    }
-    void build(int s,int e,int node)
-    {
-        if(s==e)
-            tree[node].val = a[s];
-        else
-        {
-            int mid=(s+e)/2;
-            build(s,mid,2*node);
-            build(mid+1,e,2*node+1);
-            tree[node] = combine(tree[2*node] , tree[2*node + 1]);
-        }
-    }
-    void update(int l, int r, int val ,int s ,int e ,int node)
-    {
-        if(cLazy[node])
-            propagate(node, s, e);
-        if(r<s || l>e)
-            return;
-        if(l<=s && e<=r)
-        {
-            cLazy[node] = 1;
-            lazy[node] = val;
-            propagate(node, s, e);
-            return;
-        }
-        int mid = (s + e)/2;
-        update(l,r,val, s , mid, node*2);
-        update(l,r,val, mid+1,e ,node*2 + 1);
-        tree[node] = combine(tree[2*node] , tree[2*node + 1]);
-    }
-    tree_node query(int l, int r, int s, int e, int node)
-    {
-        if(cLazy[node])
-            propagate(node, s, e);
-        if(s>r||e<l)
-            return tree_node();
-        if(s>=l&&e<=r)
-            return tree[node];
-        int mid=(s+e)/2;
-        tree_node left_result = query(l, r, s, mid, 2*node) ;
-        tree_node right_result = query(l, r, mid+1, e, 2*node+1);
-        tree_node result = combine(left_result , right_result);
-        return result;
-    }
-
-    void build()
-    {
-        build(0,n-1,1);
-    }
-    void update(int pos,int val)
-    {
-        update(pos,pos, val , 0 , n-1,1);
-    }
-    void update(int l,int r,int val)
-    {
-        update(l,r, val , 0 , n-1,1);
-    }
-    tree_node query(int l,int r)
-    {
-        return query(l,r,0,n-1,1);
-    }
-};
-/* How to Use - 
-segmentTree seg(n); // n is the size of array 
-seg.a = v; // Array
-seg.build(); // Build the tree
-seg.update(l,r,val); // a[l] = a[l+1] = ... = a[r] = val
-seg.update(pos,val); // do a[pos] = val
-seg.query(l,r); // get sum
-Zero Based Indexing in Array and 1 Based Indexing in Tree
-*/
+//[l, r+1] for query and set
