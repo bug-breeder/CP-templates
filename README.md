@@ -1,4 +1,4 @@
-# alg_template
+# Useful CP Templates
 
 ## String Algorithms
 - [Z Algorithm](./string_algs/z_alg.cpp) 
